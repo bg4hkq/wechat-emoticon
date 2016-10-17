@@ -12,7 +12,7 @@ jv = json.loads(jcontent)
 
 for i in jv:
     r = requests.get(i['url'])
-    with open("pics/" + i['md5']+'.png', 'wb') as f:
+    with open("pics/" + i['md5']+'.gif', 'wb') as f:
         for chunk in r.iter_content(chunk_size=1024):
             if chunk:
                 f.write(chunk)
